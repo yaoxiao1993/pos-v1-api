@@ -20,3 +20,21 @@
 **********************
 
 ```
+### 操作指南
+1. 安装相关依赖
+```npm install```
+2. 安装mongoDB，并插入item数据
+```
+{ barcode: 'ITEM000000', name: '可口可乐', unit: '瓶', price: 3.00, promotion: '买二送一' },
+{ barcode: 'ITEM000001', name: '雪碧', unit: '瓶', price: 3.00, promotion: '买二送一' },
+{ barcode: 'ITEM000002', name: '苹果', unit: '斤', price: 5.50, promotion: '无' },
+{ barcode: 'ITEM000003', name: '荔枝', unit: '斤', price: 15.00, promotion: '无' },
+{ barcode: 'ITEM000004', name: '电池', unit: '个', price: 2.00, promotion: '无' },
+{ barcode: 'ITEM000005', name: '方便面', unit: '袋', price: 4.50, promotion: '买二送一' }
+```
+3. postman测试
+- GET    http://localhost:3000/items           获取全部商品
+- GET    http://localhost:3000/items/ITEM000000       获取一个商品
+- POST   http://localhost:3000/items           增加一个商品
+- DELETE http://localhost:3000/items/ITEM000005       删除商品
+- PUT    http://localhost:3000/items/ITEM000005       更新数据
