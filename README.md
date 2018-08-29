@@ -38,3 +38,4 @@
 - POST   http://localhost:3000/items           增加一个商品
 - DELETE http://localhost:3000/items/ITEM000005       删除商品
 - PUT    http://localhost:3000/items/ITEM000005       更新数据
+- GET    http://localhost:3000/figure       获取收据信息

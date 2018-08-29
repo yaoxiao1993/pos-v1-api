@@ -17,9 +17,9 @@ app.use(morgan('short'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/items', router);
+// app.use('/items', router);
 
-app.get('/', function(req, res) {
+app.get('/items', function(req, res) {
     Item.find().sort({'createdAt': -1}).exec(function(err, items) {
       if (err) return res.status(500).json({error: err.message});
       res.json({ items: items})
@@ -59,4 +59,9 @@ app.put('/items/ITEM000000', function(req, res) {
       if (err) return res.status(500).json({error: err.message});
       res.json({ items: items})
     });
+});
+
+app.get('/figure', function(req, res) {
+       res.json({ message: '***<没钱赚商店>收据*** {名称:可口可乐，数量:3瓶，单价:3.00(元)，小计:6.00(元)},{名称:羽毛球，数量:5个，单价:1.00(元)，小计:4.00(元)},{名称:苹果，数 :2 ，单价:5.50(元)， 计:11.00(元)} 总计:21.00(元) 节省:4.00(元)'
+       })
 });
