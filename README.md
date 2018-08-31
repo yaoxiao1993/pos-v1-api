@@ -32,7 +32,11 @@
 { barcode: 'ITEM000004', name: '电池', unit: '个', price: 2.00, promotion: '无' },
 { barcode: 'ITEM000005', name: '方便面', unit: '袋', price: 4.50, promotion: '买二送一' }
 ```
-3. postman测试
+3. 开启服务器
+```
+node index.js
+```
+4. postman测试
 - GET    http://localhost:3000/items           获取全部商品
 - GET    http://localhost:3000/items/ITEM000000       获取一个商品
 - POST   http://localhost:3000/items           增加一个商品
